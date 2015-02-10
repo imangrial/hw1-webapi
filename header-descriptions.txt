@@ -1,0 +1,122 @@
+REST Request Header:
+
+GET https://www.googleapis.com/books/v1/volumes?q=turing HTTP/1.1
+    This is a particular HTTP verb which pertains to getting data off a server. It implies a readonly action
+
+Accept-Encoding: gzip,deflate
+    The accepting encoding of the packets. gzip pertains to a particular compression method.
+
+Host: www.googleapis.com
+    The name of the host which the server is running on. 
+
+Connection: Keep-Alive
+    Whether or not to keep the connection persistant or not. Keep-Alive implies that the
+    connection should be kept alive
+
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    This is the actual client which is connecting to the server. Since we were using SoapUI it appears to not have a common browser
+
+REST Response Header:
+
+ETag	"_rmWcTkH-s1QFjg9mC3Xel0FZSQ/2FSmQu-BHOQvWbb3Td5LQjm4XuU"
+	A string which depicts the version a representation. 
+
+Content-Length	28526
+	The size of the entity body in bytes. Allows for a client to prepare an appropirate size. 
+
+#status#	HTTP/1.1 200 OK
+	Provides the HTTP exit status.
+
+X-XSS-Protection	1; mode=block
+	The header which enables Cross Site Scripting (XSS). Usually this is enabled however it is re-enabled just in case the user disabled this.
+
+Expires	Mon, 09 Feb 2015 22:32:28 GMT
+	Displays the header expiration date. Hence the header will be valid until the given date.
+
+Alternate-Protocol	443:quic,p=0.02
+	This is for use of alternative protocols that the developers which decide to use.
+
+Server	GSE
+	This is the name of the server (hostname)
+
+X-Content-Type-Options	nosniff
+	Declares whether or not MIME sniffing is allowed
+
+Cache-Control	private, max-age=0, must-revalidate, no-transform
+	Contrains directives on how to cache between the server and client.
+
+X-Frame-Options	SAMEORIGIN
+	It describes how the page should be rendered.
+
+Vary	Origin
+Vary	X-Origin
+Date	Mon, 09 Feb 2015 22:32:28 GMT
+	Timestamp
+Content-Type	application/json; charset=UTF-8
+	Displays the encoding and actual response type
+
+SOAP REquest Header:
+
+POST http://www.webservicex.net/geoipservice.asmx HTTP/1.1
+    This tells the actual type of action that is being performed over HTTP (POST)
+    POST implies a readonly action
+
+Accept-Encoding: gzip,deflate
+    This is the type of encoding which is applied to the packets. gzip is common, open source
+    and available to everyone which is why it is used.
+
+Content-Type: text/xml;charset=UTF-8
+    Gives the actually format of the messages passed. In this case it is passing text in the form
+    of XML and is using UTF-8 encoding in those files
+
+SOAPAction: "http://www.webservicex.net/GetGeoIP"
+    This field gives the intent of the SOAP request. In this case it was to establish a connection
+    with the above URL
+
+Content-Length: 274
+    Gives the character length of the request as an integer
+
+Host: www.webservicex.net
+    Gives the machine's hostname on the network. Note that this is not the same as the hostname
+    of the machine (also known as the computername)
+
+Connection: Keep-Alive
+    Whether or not to make this a single established connection or a persistant connection.
+    Keep-Alive states that the connection is to persist
+
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+    Gives the actual browser which is being used. Since this is SOAPUI it is shown as a non-
+    standard browser (not like firefox or google-chrome)
+
+SOAP Request Header:
+
+X-AspNet-Version	4.0.30319
+    Gives the verison of AspNet which is being used. This can be seen as a security flaw as knowing the version can
+    be very useful to hackers
+
+Vary	Accept-Encoding
+    Tells wheter or not enconding of packets is accepted
+
+Date	Tue, 10 Feb 2015 01:42:05 GMT
+    Gives the current timestamp of the transaction
+
+Content-Length	403
+    Gives the actual size of the content which the header transfers (header included)
+
+#status#	HTTP/1.1 200 OK
+    Gives the HTTP exit status. Exit status 200 shows that the transaction was successful
+
+Content-Encoding	gzip
+    Gives the particular encoding of the data transferred. In this case it was compressed via gzip
+
+Content-Type	text/xml; charset=utf-8
+    Gives the exact format of the data being sent. In this case it is an xml text file which uses UTF-8 character encoding
+
+Server	Microsoft-IIS/7.0
+    Gives the server's hostname of the machine.
+
+X-Powered-By	ASP.NET
+    Gives the specific technology which the web application is using
+
+Cache-Control	private, max-age=0
+    Specifies how teh cache is actually allocated and used. In this case the max-age=0 shows that the cache is not actually stored
